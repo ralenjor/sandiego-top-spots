@@ -89,7 +89,8 @@ function renderTable(data) {
 
         $btn.on('click', function(e) {
             e.stopPropagation();
-            window.open(mapUrl, '_blank');
+            console.log('Row clicked:', lat, lon);
+            updateRightSideMap(lat, lon);
         });
 
         const $row = $('<tr>');
@@ -105,7 +106,7 @@ function renderTable(data) {
 
 function updateRightSideMap(lat, lon) {
     const mapIframe = document.getElementById('map-placeholder');
-    // Using Google Maps Embed API (Standard View)
+    // Using Google Maps Embed API
     const embedUrl = `https://maps.google.com/maps?q=${lat},${lon}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
     mapIframe.src = embedUrl;
 }
