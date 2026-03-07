@@ -3,12 +3,36 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" 
+  content="default-src 'self'; 
+           script-src 'self' https://maps.googleapis.com; 
+           img-src 'self' data: https://*.googleapis.com https://*.gstatic.com https://*.ggpht.com; 
+           style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+           font-src 'self' https://fonts.gstatic.com; 
+           connect-src 'self' https://*.googleapis.com https://*.gstatic.com;">
+<title>San Diego Top Spots</title>
 </head>
+<div id="title-container">
+    <h1 id="title">San Diego Top Spots</h1>
+</div>
+<div id="table-container">
+    <table id="top-spots-table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Link</th>
+        </tr>
+        </thead>
+        <tbody>
 
+        </tbody>
+    </table>
+</div>
 <body>
     <!-- Write your markup here -->
-
-    <!-- Don't forget to add your <script> tag here -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="main.js" type="module"></script>
 </body>
 
 </html>
