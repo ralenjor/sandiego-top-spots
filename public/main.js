@@ -28,7 +28,7 @@ if ("geolocation" in navigator){
 async function processDataWithLocation(userLat, userLon){
     
     try{
-    const response = await fetch('data.json');
+    const response = await fetch('/data');
     const locations = await response.json();
 
     const locationsWithDistance = locations.map(spot => {
